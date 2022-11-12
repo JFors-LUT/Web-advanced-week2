@@ -18,4 +18,4 @@ app.get("/hello", (req, res) => {
 });
 
 
-//app.listen(port, () => console.log(`Server listening a port ${port}!`));
+app.listen(port, () => console.log(`Server listening a port ${port}!`));
