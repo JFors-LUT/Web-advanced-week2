@@ -38,10 +38,11 @@ app.get("/echo/:id", (req, res) => {
 
 app.post("/sum", (req, res) => {
     let total = 0
-    numbers = req.body
+    numbers = req.body.numbers
     for (let i = 0; i < numbers.length; i++){
         total += numbers[i]
     }  
+    total = {sum: total}
     res.json(total)
     
 });
