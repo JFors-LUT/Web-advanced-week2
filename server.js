@@ -15,6 +15,8 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
 
+
+
 app.get("/hello", (req, res) => {
     res.json(helloWorld);
 });
@@ -36,7 +38,7 @@ app.get("/echo/:id", (req, res) => {
 
 app.post("/sum", (req, res) => {
     let total = 0
-    numbers = req.body.numbers
+    numbers = req.body
     for (let i = 0; i < numbers.length; i++){
         total += numbers[i]
     }  
