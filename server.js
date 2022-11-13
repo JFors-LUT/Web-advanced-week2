@@ -2,9 +2,6 @@ let helloWorld = {
     msg: "Hello world"
 }
 
-let animals = [{
-    id: "dog"
-}];
 
 const express = require("express");
 const path = require("path");
@@ -23,7 +20,8 @@ app.get("/hello", (req, res) => {
 
 
 app.get("/echo/:id", (req, res) => {
-    res.json(animals[req.params.id]);
+    animal = {id: req.params.id}
+    res.json(animal);
     
 });
 
